@@ -4,9 +4,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
-$rec_addr = '192.168.0.110';
+$rec_addr = '192.168.2.5';
 
-$connection = new AMQPStreamConnection('localhost', 5672, 'guest', 'guest');
+$connection = new AMQPStreamConnection($rec_addr, 5672, 'admin', 'password');
 $channel = $connection->channel();
 
 
